@@ -8,7 +8,7 @@
 - **MSSV:** 2A202602535
 - **Lớp:** K4-L3B
 - **Repository URL:** https://github.com/Tuan2Anh/K4-L3B-DAY13-NguyenTuanAnh-2A202602535-Monitoring-LLMOps
-- **Commit SHA cuối:** `4f26b98` (`4f26b98fb1da68166112ae8ee3099b03dd233b68`)
+- **Commit SHA cuối:** `3f4ad3a` (`3f4ad3abcfb87b7a63d91cf0eb2623a886477b78`)
 - **Challenge ID:** `day13-k4-l3b-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602535`
 
