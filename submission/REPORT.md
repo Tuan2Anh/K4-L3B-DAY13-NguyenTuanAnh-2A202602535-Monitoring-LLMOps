@@ -8,7 +8,7 @@
 - **MSSV:** 2A202602535
 - **Lớp:** K4-L3B
 - **Repository URL:** https://github.com/Tuan2Anh/K4-L3B-DAY13-NguyenTuanAnh-2A202602535-Monitoring-LLMOps
-- **Commit SHA cuối:** `3f4ad3a` (`3f4ad3abcfb87b7a63d91cf0eb2623a886477b78`)
+- **Commit SHA cuối:** `d5cffd8` (`d5cffd840ee8be563f10ba808ff39eb448d394b8`)
 - **Challenge ID:** `day13-k4-l3b-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602535`
 
@@ -95,15 +95,15 @@
   - Khi gặp log bất thường, chỉ cần copy `correlation_id` và tìm kiếm trên Langfuse UI trong trường metadata.
 
 - **Prompt name:** `day13-chat`
-- **Version/label baseline:** Version 1 (`labels: ['baseline', 'production']`)
-- **Version/label candidate:** Version 2 (`labels: ['candidate']`)
+- **Version/label baseline:** Version 1 (`labels: ['baseline', 'production']` - `v1 baseline prompt`)
+- **Version/label candidate:** Version 2 (`labels: ['candidate', 'latest']` - `v2 candidate prompt with concise style`)
 - **Trace ID của mỗi version:**
-  - Trace ID Version 1: `bff188b639ad87f940060e26c539fa16`
+  - Trace ID Version 1: `43a74e5708144582dd3de44ca85c549c` (Liên kết trực tiếp tới prompt `day13-chat · v1`, minh chứng tại `evidence/07-trace-waterfall.png`)
   - Trace ID Version 2: `9ad66f6e4788180c8c48c24bd6342fa0`
 - **Cách promote và rollback `production`:**
   - Quản lý tập trung trên Langfuse Prompt Management thông qua nhãn (label).
-  - Khi promote: chuyển nhãn `production` sang Version 2 qua `client.update_prompt(name='day13-chat', version=2, new_labels=['production', 'candidate'])`.
-  - Khi rollback: chuyển nhãn `production` quay lại Version 1 qua `client.update_prompt(name='day13-chat', version=1, new_labels=['production', 'baseline'])`.
+  - Khi promote: chuyển nhãn `production` sang Version 2 qua `client.update_prompt(name='day13-chat', version=2, new_labels=['production', 'latest', 'candidate'])` (Minh chứng tại `evidence/09-prompt-versions.png`).
+  - Khi rollback: chuyển nhãn `production` quay lại Version 1 qua `client.update_prompt(name='day13-chat', version=1, new_labels=['production', 'baseline'])` (Minh chứng tại `evidence/10-prompt-rollback.png`).
   - Ứng dụng tự động cập nhật prompt theo nhãn `production` mà không cần sửa code hay rebuild server.
 
 ## 6. Dashboard, SLO và alerts
@@ -199,4 +199,4 @@
 - [x] Trace/prompt evidence thuộc project Langfuse cá nhân và ảnh không lộ key/secret.
 - [x] Repository chạy lại được theo README.
 - [x] Không có secret, API key, PII thô hoặc evidence của người khác/lớp khác.
-- [ ] URL repo và commit SHA cuối đã được nộp trên LMS/Codelabs.
+- [x] URL repo và commit SHA cuối đã được nộp trên LMS/Codelabs.
