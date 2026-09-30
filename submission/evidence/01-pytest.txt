@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-8.3.5, pluggy-1.6.0 -- /home/tuananh/.local/share/mise/installs/python/3.12/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/win_d/vinuni/week-4/K4-L3B-DAY13-NguyenTuanAnh-2A202602535-Monitoring-LLMOps
+plugins: anyio-4.15.1, asyncio-1.4.0, langsmith-0.14.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 26 items
+
+tests/test_agent_prompt_trace.py::test_agent_records_prompt_version_with_v4_observation_api PASSED [  3%]
+tests/test_challenge_config.py::ChallengeConfigTests::test_explicit_practice_incident_does_not_require_release_file PASSED [  7%]
+tests/test_challenge_config.py::ChallengeConfigTests::test_missing_challenge_explains_that_coach_has_not_released_it PASSED [ 11%]
+tests/test_challenge_config.py::ChallengeConfigTests::test_official_incident_comes_from_release_file PASSED [ 15%]
+tests/test_challenge_config.py::ChallengeConfigTests::test_query_order_is_deterministic_for_the_released_seed PASSED [ 19%]
+tests/test_challenge_config.py::ChallengeConfigTests::test_unknown_incident_is_rejected PASSED [ 23%]
+tests/test_challenge_config.py::ChallengeConfigTests::test_valid_challenge_is_loaded PASSED [ 26%]
+tests/test_chat_observability.py::test_chat_response_log_exposes_quality_for_dashboard PASSED [ 30%]
+tests/test_chat_observability.py::test_correlation_id_and_enrichment_in_logs PASSED [ 34%]
+tests/test_chat_observability.py::test_custom_correlation_id_propagated PASSED [ 38%]
+tests/test_cli_windows_encoding.py::WindowsCliEncodingTests::test_help_does_not_crash_when_terminal_uses_cp1258 PASSED [ 42%]
+tests/test_dashboard_validator.py::test_repository_dashboard_contract_is_valid PASSED [ 46%]
+tests/test_dashboard_validator.py::test_validator_rejects_panel_without_threshold PASSED [ 50%]
+tests/test_dashboard_validator.py::test_validator_rejects_panel_without_query_example PASSED [ 53%]
+tests/test_metrics.py::test_percentile_basic PASSED                      [ 57%]
+tests/test_pii.py::test_scrub_email PASSED                               [ 61%]
+tests/test_pii.py::test_scrub_common_vietnamese_phone_formats PASSED     [ 65%]
+tests/test_pii.py::test_scrub_cccd PASSED                                [ 69%]
+tests/test_pii.py::test_scrub_credit_card PASSED                         [ 73%]
+tests/test_prompt_management.py::test_local_prompt_fallback_keeps_lab_runnable_without_langfuse PASSED [ 76%]
+tests/test_prompt_management.py::test_langfuse_prompt_version_and_label_are_resolved PASSED [ 80%]
+tests/test_prompt_management.py::test_prompt_fetch_failure_uses_visible_local_fallback PASSED [ 84%]
+tests/test_prompt_management.py::test_sdk_fallback_is_not_reported_as_managed_prompt PASSED [ 88%]
+tests/test_tracing_adapter.py::TracingAdapterTests::test_adapter_uses_the_installed_langfuse_v4_api PASSED [ 92%]
+tests/test_tracing_adapter.py::TracingAdapterTests::test_tracing_is_disabled_without_both_keys PASSED [ 96%]
+tests/test_validate_logs.py::test_validator_detects_raw_vietnamese_phone PASSED [100%]
+
+============================== 26 passed in 1.32s ==============================
